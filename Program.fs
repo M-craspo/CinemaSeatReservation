@@ -40,7 +40,7 @@ module CinemaHallOperations =
             Seats = seats 
         }
 
-    // Pure function to book a seat
+    // Pure Function to book a seat
     let bookSeat (hall: CinemaHall) (row: int) (col: int) (customerName: string) (showtime: DateTime) =
         // Check seat availability using pattern matching
         match hall.Seats.[row, col].Status with
