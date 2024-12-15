@@ -1,26 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mahmoudahmed/Desktop/Uni/L4-S1/pl3/PL3/PROJECT/cinema_seat_reservation/cinema_seat_reservation.fsproj": {}
+    "C:\\Users\\semse\\source\\repos\\CinemaSeatReservation\\cinema_seat_reservation.fsproj": {}
   },
   "projects": {
-    "/Users/mahmoudahmed/Desktop/Uni/L4-S1/pl3/PL3/PROJECT/cinema_seat_reservation/cinema_seat_reservation.fsproj": {
+    "C:\\Users\\semse\\source\\repos\\CinemaSeatReservation\\cinema_seat_reservation.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mahmoudahmed/Desktop/Uni/L4-S1/pl3/PL3/PROJECT/cinema_seat_reservation/cinema_seat_reservation.fsproj",
+        "projectUniqueName": "C:\\Users\\semse\\source\\repos\\CinemaSeatReservation\\cinema_seat_reservation.fsproj",
         "projectName": "cinema_seat_reservation",
-        "projectPath": "/Users/mahmoudahmed/Desktop/Uni/L4-S1/pl3/PL3/PROJECT/cinema_seat_reservation/cinema_seat_reservation.fsproj",
-        "packagesPath": "/Users/mahmoudahmed/.nuget/packages/",
-        "outputPath": "/Users/mahmoudahmed/Desktop/Uni/L4-S1/pl3/PL3/PROJECT/cinema_seat_reservation/obj/",
+        "projectPath": "C:\\Users\\semse\\source\\repos\\CinemaSeatReservation\\cinema_seat_reservation.fsproj",
+        "packagesPath": "C:\\Users\\semse\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\semse\\source\\repos\\CinemaSeatReservation\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/mahmoudahmed/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\semse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
         ],
         "sources": {
-          "/usr/local/share/dotnet/sdk/8.0.403/FSharp/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\8.0.404\\FSharp\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,7 +49,7 @@
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[8.0.401, )",
+              "version": "[8.0.403, )",
               "generatePathProperty": true
             },
             "System.Drawing.Common": {
@@ -62,12 +69,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.10, 8.0.10]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -76,7 +77,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

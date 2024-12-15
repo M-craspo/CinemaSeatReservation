@@ -1,6 +1,8 @@
 open System
 open System.Windows.Forms
 open System.Drawing
+open System.Text
+open System.IO
 
 // Immutable domain types
 type SeatStatus = 
@@ -60,6 +62,61 @@ module CinemaHallOperations =
             // Return updated hall and ticket
             Some({ hall with Seats = updatedSeats }, ticket)
         | Reserved -> None
+
+
+
+// Save tickets to CSV
+let saveTicketsToFile tickets filename =
+    try
+        let stringBuilder = StringBuilder()
+        stringBuilder.AppendLine("TicketId,CustomerName,Row,Column,Showtime") |> ignore
+
+        for ticket in tickets do
+            let ticketString = 
+                sprintf "%A,%s,%d,%d,%O" 
+                    ticket.TicketId 
+                    ticket.CustomerName 
+                    ticket.Seat.Row 
+                    ticket.Seat.Column 
+                    ticket.Showtime
+            stringBuilder.AppendLine(ticketString) |> ignore
+
+        File.WriteAllText(filename, stringBuilder.ToString())
+        MessageBox.Show(sprintf "Tickets saved successfully to %s" filename) |> ignore
+    with
+    | ex -> 
+        MessageBox.Show(sprintf "Error saving tickets to file: %s" ex.Message) |> ignore
+
+
+
+
+// Load tickets from CSV
+let loadTicketsFromFile filename =
+    try
+        if File.Exists(filename) then
+            let lines = File.ReadAllLines(filename) |> Array.skip 1 // Skip header
+            lines 
+            |> Array.map (fun line ->
+                let parts = line.Split(',')
+                {
+                    TicketId = Guid.Parse(parts.[0])
+                    CustomerName = parts.[1]
+                    Seat = {
+                        Row = int parts.[2]
+                        Column = int parts.[3]
+                        Status = Reserved
+                    }
+                    Showtime = DateTime.Parse(parts.[4])
+                })
+            |> Array.toList
+        else
+            []
+    with
+    | ex -> 
+        MessageBox.Show(sprintf "Error loading tickets from file: %s" ex.Message) |> ignore
+        []
+
+
 
 // Main Form for Seat Reservation
 type CinemaReservationForm() as this =
@@ -177,6 +234,18 @@ type CinemaReservationForm() as this =
         bookButton.Size <- Size(100, 30)
         bookButton.Click.Add(bookSeatHandler)
         this.Controls.Add(bookButton)
+
+        
+        // Load tickets from CSV
+        bookedTickets <- loadTicketsFromFile "ticket.csv"
+
+         // Update UI based on loaded data
+        for ticket in bookedTickets do
+            cinemaHall.Seats.[ticket.Seat.Row, ticket.Seat.Column] <- { ticket.Seat with Status = Reserved }
+            ticketListBox.Items.Add(
+                sprintf "Ticket %A: %s - Seat %d,%d" 
+                    ticket.TicketId ticket.CustomerName ticket.Seat.Row ticket.Seat.Column
+            ) |> ignore
         // Ticket List
         ticketListBox.Location <- Point(500, 200)
         ticketListBox.Size <- Size(150, 200)

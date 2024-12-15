@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
-      "FSharp.Core/8.0.401": {
+      "FSharp.Core/8.0.403": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/FSharp.Core.dll": {
@@ -106,15 +106,15 @@
     }
   },
   "libraries": {
-    "FSharp.Core/8.0.401": {
-      "sha512": "pvmquLrs82m8WqWB49Gj+hsmnWURkUbc++pJ0P2NdrEv1ZVVrhDNjSiFNP4wW4HiTowwaRhjiBc5IKNV35Vf/A==",
+    "FSharp.Core/8.0.403": {
+      "sha512": "t1Pvv2++3zMQKKNuiQc1Lz4TCdaBajgG4mLhOE8AoFzborHQ/JbjIaJr6Mrq8m2z15KLu4r6Qz7E3oeACpljTg==",
       "type": "package",
-      "path": "fsharp.core/8.0.401",
+      "path": "fsharp.core/8.0.403",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "fsharp.core.8.0.401.nupkg.sha512",
+        "fsharp.core.8.0.403.nupkg.sha512",
         "fsharp.core.nuspec",
         "lib/netstandard2.0/FSharp.Core.dll",
         "lib/netstandard2.0/FSharp.Core.xml",
@@ -225,30 +225,38 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
-      "FSharp.Core >= 8.0.401",
+      "FSharp.Core >= 8.0.403",
       "System.Drawing.Common >= 9.0.0"
     ]
   },
   "packageFolders": {
-    "/Users/mahmoudahmed/.nuget/packages/": {}
+    "C:\\Users\\semse\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mahmoudahmed/Desktop/Uni/L4-S1/pl3/PL3/PROJECT/cinema_seat_reservation/cinema_seat_reservation.fsproj",
+      "projectUniqueName": "C:\\Users\\semse\\source\\repos\\CinemaSeatReservation\\cinema_seat_reservation.fsproj",
       "projectName": "cinema_seat_reservation",
-      "projectPath": "/Users/mahmoudahmed/Desktop/Uni/L4-S1/pl3/PL3/PROJECT/cinema_seat_reservation/cinema_seat_reservation.fsproj",
-      "packagesPath": "/Users/mahmoudahmed/.nuget/packages/",
-      "outputPath": "/Users/mahmoudahmed/Desktop/Uni/L4-S1/pl3/PL3/PROJECT/cinema_seat_reservation/obj/",
+      "projectPath": "C:\\Users\\semse\\source\\repos\\CinemaSeatReservation\\cinema_seat_reservation.fsproj",
+      "packagesPath": "C:\\Users\\semse\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\semse\\source\\repos\\CinemaSeatReservation\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/mahmoudahmed/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\semse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows"
       ],
       "sources": {
-        "/usr/local/share/dotnet/sdk/8.0.403/FSharp/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\8.0.404\\FSharp\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -270,7 +278,7 @@
           "FSharp.Core": {
             "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
             "target": "Package",
-            "version": "[8.0.401, )",
+            "version": "[8.0.403, )",
             "generatePathProperty": true
           },
           "System.Drawing.Common": {
@@ -290,12 +298,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.10, 8.0.10]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -304,7 +306,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
